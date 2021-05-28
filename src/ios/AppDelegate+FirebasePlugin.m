@@ -347,7 +347,8 @@ didDisconnectWithUser:(GIDGoogleUser *)user
                 NSDictionary* userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:
                                           @"true", @"notification_foreground",
                                           messageType, @"messageType",
-                                          aps, @"aps"
+                                          aps, @"aps",
+                                          [mutableUserInfo objectForKey:@"clientData"], @"clientData"
                                           , nil];
                 
                 objNotificationContent.userInfo = userInfo;
